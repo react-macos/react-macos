@@ -1,4 +1,7 @@
 {
+  "name": "react-macos",
+  "version": "1.0.0",
+  "description": "macOS in web",
   "private": true,
   "author": "Hocko <chengkuan689@163.com>",
   "scripts": {
