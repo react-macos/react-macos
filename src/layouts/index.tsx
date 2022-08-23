@@ -1,20 +1,11 @@
-import { Link, Outlet } from 'umi'
+import { Outlet } from 'umi'
+import StatusBar from './widgets/StatusBar'
 import styles from './index.less'
 
-export default function Layout() {
+export default function DesktopLayout() {
   return (
-    <div className={styles.navs}>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/docs">Docs</Link>
-        </li>
-        <li>
-          <a href="https://github.com/umijs/umi">Github</a>
-        </li>
-      </ul>
+    <div className={styles.desktopWrapper}>
+      <StatusBar />
       <Outlet />
     </div>
   )
