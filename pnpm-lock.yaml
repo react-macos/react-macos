@@ -5,6 +5,7 @@ specifiers:
   '@types/react': ^18.0.0
   '@types/react-dom': ^18.0.0
   '@umijs/lint': ^4.0.13
+  classnames: ^2.3.2
   eslint: ^8.22.0
   husky: ^8.0.0
   lint-staged: ^13.0.3
@@ -15,6 +16,7 @@ specifiers:
   umi: ^4.0.13
 
 dependencies:
+  classnames: 2.3.2
   normalize.css: 8.0.1
   umi: 4.0.13_dbq2e7it7ihmolzi4qw4s2j5py
 
@@ -2248,6 +2250,10 @@ packages:
     dependencies:
       inherits: 2.0.4
       safe-buffer: 5.2.1
+    dev: false
+
+  /classnames/2.3.2:
+    resolution: {integrity: sha512-CSbhY4cFEJRe6/GQzIk5qXZ4Jeg5pcsP7b5peFSDpffpe1cqjASH/n9UTjBwOp6XpMSTwQ8Za2K5V02ueA7Tmw==}
     dev: false
 
   /clean-stack/2.2.0:
