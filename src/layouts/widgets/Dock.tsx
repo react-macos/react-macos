@@ -115,11 +115,11 @@ const Dock: React.FC<MacDockProps> = (props) => {
       >
         {renderDock()}
       </div>
-      <div className={styles.icpLink}>
+      {/* <div className={styles.icpLink}>
         <a href="https://beian.miit.gov.cn/" target="_blank" rel="noreferrer">
           京 ICP 备 2022024018号
         </a>
-      </div>
+      </div> */}
     </>
   )
 }
