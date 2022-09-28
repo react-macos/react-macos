@@ -5,7 +5,7 @@ specifiers:
   '@types/react': ^18.0.0
   '@types/react-dom': ^18.0.0
   '@umijs/lint': ^4.0.13
-  classnames: ^2.3.2
+  clsx: ^1.2.1
   eslint: ^8.22.0
   husky: ^8.0.0
   lint-staged: ^13.0.3
@@ -16,7 +16,7 @@ specifiers:
   umi: ^4.0.13
 
 dependencies:
-  classnames: 2.3.2
+  clsx: 1.2.1
   normalize.css: 8.0.1
   umi: 4.0.13_dbq2e7it7ihmolzi4qw4s2j5py
 
@@ -2252,10 +2252,6 @@ packages:
       safe-buffer: 5.2.1
     dev: false
 
-  /classnames/2.3.2:
-    resolution: {integrity: sha512-CSbhY4cFEJRe6/GQzIk5qXZ4Jeg5pcsP7b5peFSDpffpe1cqjASH/n9UTjBwOp6XpMSTwQ8Za2K5V02ueA7Tmw==}
-    dev: false
-
   /clean-stack/2.2.0:
     resolution: {integrity: sha512-4diC9HaTE+KRAMWhDhrGOECgWZxoevMc5TlkObMqNSsVU62PYzXZ/SMTjzyGAFF1YusgxGcSWTEXBhp0CPwQ1A==}
     engines: {node: '>=6'}
@@ -2304,6 +2300,11 @@ packages:
       string-width: 4.2.3
       strip-ansi: 6.0.1
       wrap-ansi: 7.0.0
+    dev: false
+
+  /clsx/1.2.1:
+    resolution: {integrity: sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg==}
+    engines: {node: '>=6'}
     dev: false
 
   /color-convert/1.9.3:

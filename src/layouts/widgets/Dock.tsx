@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './Dock.less'
-import classNames from 'classnames'
+import clsx from 'clsx'
 import type { MacDockItem, MacDockProps } from '../../interface/dockInterface'
 
 const Dock: React.FC<MacDockProps> = (props) => {
@@ -48,7 +48,7 @@ const Dock: React.FC<MacDockProps> = (props) => {
    * @returns
    */
   const renderItem = (item: MacDockItem, index: number): React.ReactNode => {
-    const liClassName: string = classNames(
+    const liClassName: string = clsx(
       styles['mac-dock-item'],
       { [styles['mac-dock-item-small']]: size === 'small' },
       currentIndex !== undefined
@@ -78,7 +78,7 @@ const Dock: React.FC<MacDockProps> = (props) => {
   }
 
   /**
-   * 渲染所有项  app的集合
+   * 渲染所有项 app的集合
    * @param items
    * @returns
    */
@@ -102,10 +102,11 @@ const Dock: React.FC<MacDockProps> = (props) => {
       </ul>
     )
   }
+
   return (
     <>
       <div
-        className={classNames(
+        className={clsx(
           styles['mac-dock-container'],
           styles[`mac-dock-placement-${placement}`],
           className
