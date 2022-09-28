@@ -1,9 +1,9 @@
 import React from 'react'
 import styles from './Dock.less'
 import classNames from 'classnames'
-import { MacDockItem, MacDockProps } from '../../interface/dockInterface'
+import type { MacDockItem, MacDockProps } from '../../interface/dockInterface'
 
-const Dock: React.FC = (props: MacDockProps) => {
+const Dock: React.FC<MacDockProps> = (props) => {
   const {
     className,
     style,

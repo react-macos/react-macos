@@ -2,7 +2,7 @@ import { Outlet } from 'umi'
 import StatusBar from './widgets/StatusBar'
 import Dock from './widgets/Dock'
 import styles from './index.less'
-import { MacDockItem } from '../interface/dockInterface'
+import type { MacDockItem } from '../interface/dockInterface'
 
 export default function DesktopLayout() {
   const dockList: MacDockItem[] = [
@@ -39,6 +39,7 @@ export default function DesktopLayout() {
       icon: require('./images/dock-icon/vscode.png'),
     },
   ]
+
   return (
     <div className={styles.desktopWrapper}>
       <StatusBar />
