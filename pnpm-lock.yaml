@@ -6,6 +6,7 @@ specifiers:
   '@types/react-dom': ^18.0.0
   '@umijs/lint': ^4.0.13
   clsx: ^1.2.1
+  dayjs: ^1.11.5
   eslint: ^8.22.0
   husky: ^8.0.0
   lint-staged: ^13.0.3
@@ -17,6 +18,7 @@ specifiers:
 
 dependencies:
   clsx: 1.2.1
+  dayjs: 1.11.5
   normalize.css: 8.0.1
   umi: 4.0.13_dbq2e7it7ihmolzi4qw4s2j5py
 
@@ -2568,6 +2570,10 @@ packages:
 
   /current-script-polyfill/1.0.0:
     resolution: {integrity: sha512-qv8s+G47V6Hq+g2kRE5th+ASzzrL7b6l+tap1DHKK25ZQJv3yIFhH96XaQ7NGL+zRW3t/RDbweJf/dJDe5Z5KA==}
+    dev: false
+
+  /dayjs/1.11.5:
+    resolution: {integrity: sha512-CAdX5Q3YW3Gclyo5Vpqkgpj8fSdLQcRuzfX6mC6Phy0nfJ0eGYOeS7m4mt2plDWLAtA4TqTakvbboHvUxfe4iA==}
     dev: false
 
   /debug/4.3.4:
