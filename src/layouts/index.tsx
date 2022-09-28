@@ -8,35 +8,35 @@ export default function DesktopLayout() {
   const dockList: MacDockItem[] = [
     {
       label: 'launchpad',
-      icon: require('./images/dock-icon/launchpad.png'),
+      icon: require('@/assets/app-icon/launchpad.png'),
     },
     {
       label: 'bear',
-      icon: require('./images/dock-icon/bear.png'),
+      icon: require('@/assets/app-icon/bear.png'),
     },
     {
       label: 'facetime',
-      icon: require('./images/dock-icon/facetime.png'),
+      icon: require('@/assets/app-icon/facetime.png'),
     },
     {
       label: 'github',
-      icon: require('./images/dock-icon/github.png'),
+      icon: require('@/assets/app-icon/github.png'),
     },
     {
       label: 'mail',
-      icon: require('./images/dock-icon/mail.png'),
+      icon: require('@/assets/app-icon/mail.png'),
     },
     {
       label: 'safari',
-      icon: require('./images/dock-icon/safari.png'),
+      icon: require('@/assets/app-icon/safari.png'),
     },
     {
       label: 'terminal',
-      icon: require('./images/dock-icon/terminal.png'),
+      icon: require('@/assets/app-icon/terminal.png'),
     },
     {
       label: 'vscode',
-      icon: require('./images/dock-icon/vscode.png'),
+      icon: require('@/assets/app-icon/vscode.png'),
     },
   ]
 
