@@ -1,5 +1,7 @@
 @import '~@/styles/variables.less';
 
+@item-gap: 10px;
+
 .statusBarWrapper {
   position: absolute;
   height: @status-bar-height;
@@ -12,8 +14,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #fff;
+  gap: @item-gap;
+  // color: #fff;
   font-size: 14px;
+  overflow: hidden;
 }
 
 .statusLeft {
@@ -25,6 +29,7 @@
   flex: auto;
   justify-content: flex-end;
   align-items: center;
+  gap: @item-gap;
 }
 
 .statusItem {
@@ -32,4 +37,9 @@
     width: 16px;
     height: 16px;
   }
+}
+
+.themeToggle {
+  position: relative;
+  bottom: 2px;
 }

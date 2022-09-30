@@ -1,50 +1,34 @@
-import { Outlet } from 'umi'
-import StatusBar from './widgets/StatusBar'
-import Dock from './widgets/Dock'
-import styles from './index.less'
-import type { MacDockItem } from '../interface/dockInterface'
+import React from 'react'
+import { createTheme, NextUIProvider } from '@nextui-org/react'
+import useDarkMode from 'use-dark-mode'
+import DesktopLayout from './DesktopLayout'
 
-export default function DesktopLayout() {
-  const dockList: MacDockItem[] = [
-    {
-      label: 'launchpad',
-      icon: require('@/assets/app-icon/launchpad.png'),
+const RootWrapper: React.FC = () => {
+  const darkMode = useDarkMode(false)
+
+  const lightTheme = createTheme({
+    type: 'light',
+    theme: {
+      colors: {
+        txt: 'black',
+      },
     },
-    {
-      label: 'bear',
-      icon: require('@/assets/app-icon/bear.png'),
+  })
+
+  const darkTheme = createTheme({
+    type: 'dark',
+    theme: {
+      colors: {
+        txt: 'white',
+      },
     },
-    {
-      label: 'facetime',
-      icon: require('@/assets/app-icon/facetime.png'),
-    },
-    {
-      label: 'github',
-      icon: require('@/assets/app-icon/github.png'),
-    },
-    {
-      label: 'mail',
-      icon: require('@/assets/app-icon/mail.png'),
-    },
-    {
-      label: 'safari',
-      icon: require('@/assets/app-icon/safari.png'),
-    },
-    {
-      label: 'terminal',
-      icon: require('@/assets/app-icon/terminal.png'),
-    },
-    {
-      label: 'vscode',
-      icon: require('@/assets/app-icon/vscode.png'),
-    },
-  ]
+  })
 
   return (
-    <div className={styles.desktopWrapper}>
-      <StatusBar />
-      <Outlet />
-      <Dock items={dockList} />
-    </div>
+    <NextUIProvider theme={darkMode.value ? darkTheme : lightTheme}>
+      <DesktopLayout />
+    </NextUIProvider>
   )
 }
+
+export default RootWrapper

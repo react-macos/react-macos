@@ -1,5 +1,6 @@
 import React from 'react'
 import apple from '@/assets/svgs/apple.svg'
+import ThemeToggle from '@/components/ThemeToggle'
 import styles from './StatusBar.less'
 
 const StatusBar: React.FC = () => {
@@ -11,9 +12,8 @@ const StatusBar: React.FC = () => {
         </div>
       </div>
       <div className={styles.statusRight}>
-        <div className={styles.statusItem}>
-          9月28日 周三 18:53
-        </div>
+        <ThemeToggle className={styles.themeToggle} />
+        <div className={styles.statusItem}>9月28日 周三 18:53</div>
       </div>
     </div>
   )
