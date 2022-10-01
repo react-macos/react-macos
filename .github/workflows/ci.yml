@@ -19,6 +19,8 @@ jobs:
     # 使用别人的action
     - uses: actions/checkout@v3
     - uses : KSXGitHub/github-actions-setup-pnpm@master
+    with:
+        version: 4.11.1
     # 步骤名称
     - name: pnpm install
       # 步骤执行指令
@@ -29,8 +31,6 @@ jobs:
     - name: Deploy
       # 因为构建之后，需要把代码上传到服务器上，所以需要连接到ssh，并且做一个拷贝操作
       uses: cross-the-world/scp-pipeline@master
-      with:
-        version: 4.11.1
       env:
         WELCOME: "ssh scp ssh pipelines"
         LASTSSH: "Doing something after copying"
