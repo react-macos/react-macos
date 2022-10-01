@@ -18,6 +18,7 @@ jobs:
     steps:
     # 使用别人的action
     - uses: actions/checkout@v2
+    - uses : KSXGitHub/github-actions-setup-pnpm@master
     # 步骤名称
     - name: pnpm install
       # 步骤执行指令
