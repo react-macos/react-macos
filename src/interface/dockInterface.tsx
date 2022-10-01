@@ -6,8 +6,17 @@ type RenderItem = (
 ) => React.ReactNode
 
 export interface MacDockItem {
+  id: string
   label: string | undefined
   icon: string
+  desktop: boolean
+  show?: boolean
+  whdth?: number
+  height?: number
+  minWhidth?: number
+  minHeight?: number
+  element?: JSX.Element
+  link?: string
 }
 
 export interface MacDockProps {
