@@ -5,10 +5,6 @@ on:
     branches:
       # master分支
       - master
-  pull_request:
-    branches:
-      # master分支
-      - master
 jobs:
   # 任务ID
   build:
@@ -17,14 +13,23 @@ jobs:
     # 步骤
     steps:
     # 使用别人的action
+    - name: Checkout
     - uses: actions/checkout@v3
-    - uses: KSXGitHub/github-actions-setup-pnpm@master
+
+    - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+    - uses: pnpm/action-setup@v2.0.1
       with:
-        version: 4.11.1
+        version: 6.0.2
+
     # 步骤名称
     - name: pnpm install
       # 步骤执行指令
       run: pnpm install
+
     - name: pnpm run build
       run: pnpm run build
     # 命名这个任务为发布Deploy
