@@ -1,0 +1,144 @@
+@import '~@/styles/variables.less';
+
+@dock-background-color: #fff;
+@dock-size: 64px;
+@dock-size-sm: 40px;
+@current-scale: 1.6;
+@current-margin: 1rem;
+
+.center() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mac-dock {
+  margin: 0;
+  padding: 0 0.3rem;
+  list-style: none;
+  background: rgb(255 255 255 / 30%);
+  background-blend-mode: luminosity;
+  border: 1px solid rgb(255 255 255 / 50%);
+  border-radius: 0.75rem;
+  backdrop-filter: blur(40px);
+
+  .center();
+
+  &-container {
+    position: absolute;
+    .center();
+  }
+
+  &-placement-top,
+  &-placement-bottom {
+    width: 100%;
+  }
+
+  &-placement-top {
+    top: 0;
+
+    .mac-dock-item {
+      width: auto;
+      padding: 0.5rem 0.2rem;
+      transform-origin: center top;
+    }
+  }
+
+  &-placement-bottom {
+    bottom: 6px;
+
+    .mac-dock-item {
+      transform-origin: center bottom;
+    }
+  }
+
+  &-placement-left,
+  &-placement-right {
+    height: 100%;
+
+    .mac-dock {
+      flex-direction: column;
+
+      &-item {
+        &-current {
+          margin: @current-margin 0;
+          transform: scale(@current-scale);
+        }
+
+        &-prev,
+        &-next {
+          margin: @current-margin - 0.2 0;
+          transform: scale(@current-scale - 0.2);
+
+          &-second {
+            margin: @current-margin - 0.4 0;
+            transform: scale(@current-scale - 0.4);
+          }
+        }
+      }
+    }
+  }
+
+  &-placement-left {
+    left: 0;
+
+    .mac-dock-item {
+      transform-origin: left center;
+    }
+  }
+
+  &-placement-right {
+    right: 0;
+
+    .mac-dock-item {
+      transform-origin: right center;
+    }
+  }
+
+  &-item {
+    width: @dock-size;
+    height: @dock-size;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &&-small {
+      width: @dock-size-sm;
+      height: @dock-size-sm;
+    }
+
+    &-current {
+      margin: 0 @current-margin;
+      transform: scale(@current-scale);
+    }
+
+    &-prev,
+    &-next {
+      margin: 0 @current-margin - 0.2;
+      transform: scale(@current-scale - 0.2);
+
+      &-second {
+        margin: 0 @current-margin - 0.4;
+        transform: scale(@current-scale - 0.4);
+      }
+    }
+
+    img {
+      width: auto;
+      height: 100%;
+    }
+  }
+}
+
+.icpLink {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  .center();
+
+  & a {
+    color: #fff;
+    font-size: 12px;
+    text-decoration: none;
+  }
+}

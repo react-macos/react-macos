@@ -1,0 +1,45 @@
+@import '~@/styles/variables.less';
+
+@item-gap: 10px;
+
+.statusBarWrapper {
+  position: absolute;
+  height: @status-bar-height;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: rgb(255 255 255 / 30%);
+  backdrop-filter: blur(20px);
+  padding: 4px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: @item-gap;
+  // color: #fff;
+  font-size: 14px;
+  overflow: hidden;
+}
+
+.statusLeft {
+  flex: auto;
+}
+
+.statusRight {
+  display: flex;
+  flex: auto;
+  justify-content: flex-end;
+  align-items: center;
+  gap: @item-gap;
+}
+
+.statusItem {
+  img {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.themeToggle {
+  position: relative;
+  bottom: 2px;
+}

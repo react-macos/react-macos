@@ -1,21 +1,34 @@
-import { Link, Outlet } from 'umi'
-import styles from './index.less'
+import React from 'react'
+import { createTheme, NextUIProvider } from '@nextui-org/react'
+import useDarkMode from 'use-dark-mode'
+import DesktopLayout from './DesktopLayout'
 
-export default function Layout() {
+const RootWrapper: React.FC = () => {
+  const darkMode = useDarkMode(false)
+
+  const lightTheme = createTheme({
+    type: 'light',
+    theme: {
+      colors: {
+        txt: 'black',
+      },
+    },
+  })
+
+  const darkTheme = createTheme({
+    type: 'dark',
+    theme: {
+      colors: {
+        txt: 'white',
+      },
+    },
+  })
+
   return (
-    <div className={styles.navs}>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/docs">Docs</Link>
-        </li>
-        <li>
-          <a href="https://github.com/umijs/umi">Github</a>
-        </li>
-      </ul>
-      <Outlet />
-    </div>
+    <NextUIProvider theme={darkMode.value ? darkTheme : lightTheme}>
+      <DesktopLayout />
+    </NextUIProvider>
   )
 }
+
+export default RootWrapper

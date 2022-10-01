@@ -1,15 +1,13 @@
-import yayJpg from '../assets/yay.jpg'
+import React from 'react'
+import { Button } from '@nextui-org/react'
 
-export default function HomePage() {
+const HomePage: React.FC = () => {
   return (
     <div>
-      <h2>Yay! Welcome to umi!</h2>
-      <p>
-        <img src={yayJpg} width="388" />
-      </p>
-      <p>
-        To get started, edit <code>pages/index.tsx</code> and save to reload.
-      </p>
+      MacOS in the Web!!
+      <Button css={{ color: '$txt' }}>Click me</Button>
     </div>
   )
 }
+
+export default HomePage
