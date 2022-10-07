@@ -1,9 +1,11 @@
 import React from 'react'
 import { createTheme, NextUIProvider } from '@nextui-org/react'
 import useDarkMode from 'use-dark-mode'
-import DesktopLayout from './DesktopLayout'
+import DesktopLayout from './desktop/DesktopLayout'
+import Login from './login/Login'
 
 const RootWrapper: React.FC = () => {
+  const [login, setLogin] = React.useState<boolean>(true)
   const darkMode = useDarkMode(false)
 
   const lightTheme = createTheme({
@@ -26,7 +28,7 @@ const RootWrapper: React.FC = () => {
 
   return (
     <NextUIProvider theme={darkMode.value ? darkTheme : lightTheme}>
-      <DesktopLayout />
+      {login ? <Login setLogin={setLogin} /> : <DesktopLayout />}
     </NextUIProvider>
   )
 }
