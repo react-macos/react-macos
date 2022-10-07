@@ -1,0 +1,45 @@
+.center() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loginWrapper {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .user {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    .enterLink {
+      margin: 10px auto 0;
+      color: #fff;
+
+      &:hover {
+        color: #000;
+      }
+    }
+  }
+
+  .icpLink {
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    .center();
+
+    & a {
+      color: #fff;
+      font-size: 12px;
+      text-decoration: none;
+    }
+  }
+}

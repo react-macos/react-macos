@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './Dock.less'
 import clsx from 'clsx'
-import type { MacDockItem, MacDockProps } from '../../interface/dockInterface'
+import type { MacDockItem, MacDockProps } from '@/interface/dockInterface'
 
 const Dock: React.FC<MacDockProps> = (props) => {
   const {
