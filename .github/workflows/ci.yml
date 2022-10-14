@@ -46,4 +46,4 @@ jobs:
         pass: ${{ secrets.USER_PASS }}
         connect_timeout: 10s
         local: './dist/*'
-        remote: /www/wwwroot/zhangsen
+        remote: /www/wwwroot/react-macos
